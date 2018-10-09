@@ -95,6 +95,10 @@ export default function(typename, value, capture) {
   return this;
 }
 
+export function manual(event1) {
+  event = event1;
+}
+
 export function customEvent(event1, listener, that, args) {
   var event0 = event;
   event1.sourceEvent = event;
