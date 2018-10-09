@@ -799,6 +799,7 @@ function customEvent(event1, listener, that, args) {
   event1.sourceEvent = exports.event;
   exports.event = event1;
   try {
+    console.error("customEvent", exports.event, event1, event0, that, args);
     return listener.apply(that, args);
   } finally {
     exports.event = event0;
