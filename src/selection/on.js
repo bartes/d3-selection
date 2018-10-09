@@ -104,9 +104,9 @@ export function customEvent(event1, listener, that, args) {
   event1.sourceEvent = event;
   event = event1;
   try {
-    console.error("customEvent", event, event1, event0, that, args)
+    console.error("customEvent", event, that, args)
     var list = listener.apply(that, args);
-    console.error("afterCustomEvent");
+    console.error("afterCustomEvent", event);
     return list;
   } finally {
     event = event0;
