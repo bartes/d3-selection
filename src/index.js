@@ -15,4 +15,4 @@ export {styleValue as style} from "./selection/style";
 export {default as touch} from "./touch";
 export {default as touches} from "./touches";
 export {default as window} from "./window";
-export {event, customEvent} from "./selection/on";
+export {event, manual, customEvent} from "./selection/on";
