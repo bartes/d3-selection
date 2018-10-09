@@ -800,7 +800,9 @@ function customEvent(event1, listener, that, args) {
   exports.event = event1;
   try {
     console.error("customEvent", exports.event, event1, event0, that, args);
-    return listener.apply(that, args);
+    var list = listener.apply(that, args);
+    console.error("afterCustomEvent");
+    return list;
   } finally {
     exports.event = event0;
   }
